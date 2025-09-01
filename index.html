@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Homepage</title>
+ 
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             margin: 20px;
+             color: #ffffff; 
+             background-color: #454141; 
+         }
+         .container {
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 10px;
+             background-color: #454141; 
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+         }
+         h1 {
+             color: #ffffff;
+         }
+         p {
+             margin-bottom: 20px;
+             color: #ffffff; 
+         }
+         a {
+             color: inherit; 
+             text-decoration: underline;
+         }
+         .visualization-thumbnails {
+             display: flex;
+             justify-content: space-between;
+             flex-wrap: wrap;
+         }
+         .visualization-thumbnail {
+             flex: 0 0 48%;
+             margin-bottom: 5px;
+             cursor: pointer;
+             text-align: center;
+         }
+         .visualization-thumbnail img {
+             width: 100%;
+             height: 65%;
+             border-radius: 8px;
+             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+             margin-bottom: 20px;
+         }
+         .visualization-name {
+             font-size: 24px;
+         }
+         .description {
+             font-size: 16px;
+             text-align: center;
+             max-width: 90%; 
+             margin: 0 auto; 
+             margin-top: 15px;
+         }
+     </style>
+ </head>
+ <body>
+ 
+ <div class="container">
+     <h1>Visualising the National Library's Archive of Publications</h1>
+     <p>Welcome to the National Library of Scotland Publication Data Visualization project. This project aims to explore and provide insights into the vast collection of bibliographic records from the <a href="https://www.nls.uk/" target="_blank" rel="noopener noreferrer">National Library of Scotland's archive</a>. By visualizing this data, we aim to enhance accessibility and promote exploration of the rich cultural heritage contained within. The dataset is available to download <a href="https://data.nls.uk/data/metadata-collections/catalogue-published-material/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+     <p>The following visualizations are made using a sample dataset comprising 100,000 records from the National Library's archive. Happy exploring!</p>
+     
+     <div class="visualization-thumbnails">
+         <div class="visualization-thumbnail" onclick="navigateToPage('beeswarm.html')">
+             <img src="beeswarm-thumbnail1.jpg" alt="Beeswarm Visualization">
+             <div class="visualization-name">Beeswarm</div>
+             <div class="description">Click on the image to explore authors, poets and writers, some of which you may recognise, whose records help to form this vast dataset. The Beeswarm visualization allows for the discovery of all authors, with insights into various publishing pattern over the past 500 years.</div>
+         </div>
+         
+         <div class="visualization-thumbnail" onclick="navigateToPage('tech_cloud.html')">
+             <img src="tech-cloud-thumbnail.jpg" alt="Tech Cloud Visualization">
+             <div class="visualization-name">Vertical Word Cloud</div>
+             <div class="description">Click on the image to explore the dataset based on different fields and changes of frequencies over time. The Vertical Word Cloud visualization enables exploration of the dataset through different fields such as description, subject, and creator, offering insights into changes over time.</div>
+         </div>
+     </div>
+ </div>
+ 
+ <script>
+     function navigateToPage(page) {
+         window.location.href = `https://orlaghk.github.io/${page}`;
+     }
+ </script>
+ 
+ </body>
+ </html>
+ 
